@@ -1294,6 +1294,9 @@ static inline char grabmouse_low(char a)
 //
 void mouseGrabInput(bool grab)
 {
+    if (grab != g_mouseGrabbed)
+        g_mousePos.x = g_mousePos.y = 0;
+
     if (appactive && g_mouseEnabled)
     {
 #if !defined EDUKE32_TOUCH_DEVICES
@@ -1304,7 +1307,6 @@ void mouseGrabInput(bool grab)
     else
         g_mouseGrabbed = grab;
 
-    g_mousePos.x = g_mousePos.y = 0;
 }
 
 void mouseLockToWindow(char a)
