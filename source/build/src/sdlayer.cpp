@@ -1511,7 +1511,6 @@ void sdlayer_setvideomode_opengl(void)
 #endif
 
     fill_glinfo();
-
 }
 #endif  // defined USE_OPENGL
 
