@@ -6140,15 +6140,6 @@ static void G_Startup(void)
     Bfflush(NULL);
 }
 
-static void P_SetupMiscInputSettings(void)
-{
-    auto ps = g_player[myconnectindex].ps;
-
-    ps->aim_mode = ud.mouseaiming;
-    ps->auto_aim = ud.config.AutoAim;
-    ps->weaponswitch = ud.weaponswitch;
-}
-
 void G_UpdatePlayerFromMenu(void)
 {
     if (ud.recstat != 0)
